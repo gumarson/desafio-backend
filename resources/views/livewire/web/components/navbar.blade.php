@@ -1,11 +1,15 @@
 <div>
-    <div style="max-width: 1024px; margin: auto; padding: 16px 0;">
-        <ul style="display: flex; justify-content: center; font-family: monospace; font-weight: bold; font-size: 18px; gap: 16px;">
+    <div class="max-w-screen-lg mx-auto px-4 py-4 lg:py-8">
+        <ul class="flex items-center justify-center font-mono font-semibold text-lg gap-4 lg:gap-8">
             <li>
-                <a href="{{ route('home') }}" style="padding: 8px 16px; color: white; text-decoration: none; border: 1px solid red; transition: all 0.3s ease;">Filmes</a>
+                <a href="{{ route('home') }}" class="px-4 py-2 hover:text-red-600 transition-all ease-in-out">
+                    Filmes
+                </a>
             </li>
             <li>
-                <a href="{{ route('create-film') }}" style="padding: 8px 16px; color: white; text-decoration: none; border: 1px solid red; transition: all 0.3s ease;">Cadastrar</a>
+                <a href="{{ route('create-film') }}" class="px-4 py-2 border border-red-600 hover:bg-red-600 transition-all ease-in-out">
+                    Cadastrar
+                </a>
             </li>
         </ul>
     </div>

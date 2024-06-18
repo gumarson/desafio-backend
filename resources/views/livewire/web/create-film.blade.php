@@ -1,24 +1,26 @@
-<div style="max-width: 600px; margin: auto; padding: 20px; background-color: #333; border-radius: 8px;">
-    <h1 style="color: white; text-align: center; margin-bottom: 20px;">Create a New Film</h1>
+<div class="max-w-lg mx-auto p-4 bg-white text-black rounded shadow">
+    <h1 class="text-2xl font-bold mb-4">Create a New Film</h1>
     <form wire:submit.prevent="submit">
-        <div style="margin-bottom: 15px;">
-            <label for="title" style="color: white; display: block; margin-bottom: 5px;">Title</label>
-            <input type="text" id="title" wire:model="title" style="width: 100%; padding: 10px; color: black; border-radius: 4px; border: 1px solid #ccc;">
-            @error('title') <span style="color: red;">{{ $message }}</span> @enderror
+        <div class="mb-4">
+            <label for="title" class="block font-medium">Title</label>
+            <input type="text" id="title" wire:model="title" class="w-full p-2 border rounded">
+            @error('title') <span class="text-red-600">{{ $message }}</span> @enderror
         </div>
-        <div style="margin-bottom: 15px;">
-            <label for="summary" style="color: white; display: block; margin-bottom: 5px;">Summary</label>
-            <textarea id="summary" wire:model="summary" style="width: 100%; padding: 10px; color: black; border-radius: 4px; border: 1px solid #ccc;"></textarea>
-            @error('summary') <span style="color: red;">{{ $message }}</span> @enderror
+        <div class="mb-4">
+            <label for="summary" class="block font-medium">Summary</label>
+            <textarea id="summary" wire:model="summary" class="w-full p-2 border rounded"></textarea>
+            @error('summary') <span class="text-red-600">{{ $message }}</span> @enderror
         </div>
-        <div style="margin-bottom: 15px;">
-            <label for="cover" style="color: white; display: block; margin-bottom: 5px;">Cover</label>
-            <input type="text" id="cover" wire:model="cover" style="width: 100%; padding: 10px; color: black; border-radius: 4px; border: 1px solid #ccc;">
-            @error('cover') <span style="color: red;">{{ $message }}</span> @enderror
+        <div class="mb-4">
+            <label for="cover" class="block font-medium">Cover</label>
+            <input type="text" id="cover" wire:model="cover" class="w-full p-2 border rounded">
+            @error('cover') <span class="text-red-600">{{ $message }}</span> @enderror
         </div>
-        <button type="submit" style="width: 100%; padding: 10px; background-color: red; color: white; border: none; border-radius: 4px; cursor: pointer;">Create</button>
+        <button type="submit" class="bg-red-600 text-white px-4 py-2 rounded">Create</button>
     </form>
     @if (session()->has('message'))
-        <div style="color: green; text-align: center; margin-top: 15px;">{{ session('message') }}</div>
+        <div class="mt-4 text-green-600">
+            {{ session('message') }}
+        </div>
     @endif
 </div>

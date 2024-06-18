@@ -1,9 +1,9 @@
-<div style="max-width: 600px; margin: auto; padding: 20px; background-color: #333; border-radius: 8px;">
-    <h1 style="color: white; text-align: center; margin-bottom: 20px;">List of Films</h1>
-    <ul style="list-style-type: none; padding: 0;">
+<div class="max-w-lg mx-auto p-4 bg-white text-black rounded shadow">
+    <h1 class="text-2xl font-bold mb-4">List of Films</h1>
+    <ul>
         @foreach($films as $film)
-            <li style="background-color: #444; margin-bottom: 10px; padding: 10px; border-radius: 4px;">
-                <a href="{{ route('view-film', $film->id) }}" style="color: white; text-decoration: none;">{{ $film->title }}</a>
+            <li class="mb-2 p-2 border-b">
+                <a href="{{ route('view-film', $film->id) }}" class="text-blue-500 hover:underline">{{ $film->title }}</a>
             </li>
         @endforeach
     </ul>
