@@ -1,35 +1,24 @@
 <div>
-    <div class="max-w-screen-lg mx-auto px-4 py-8">
-        <form class="w-full px-4 py-8 bg-zinc-100 text-zinc-950 rounded-lg space-y-4">
-            <h1 class="text-2xl font-bold text-center font-film">
-                Cadastrar Filme
-            </h1>
-
-            <div class="flex flex-col gap-2 !mt-8">
-                <label for="title" class="font-semibold">
-                    Título
-                </label>
-                <input type="text" id="title" class="rounded-lg border border-zinc-950 p-2">
-            </div>
-
-            <div class="flex flex-col gap-2">
-                <label for="summary" class="font-semibold">
-                    Resumo
-                </label>
-                <textarea id="summary" rows="6" class="rounded-lg border border-zinc-950 p-2"></textarea>
-            </div>
-
-            <div class="flex flex-col gap-2">
-                <label for="cover" class="font-semibold">
-                    Capa
-                </label>
-                <input type="file" id="cover" class="rounded-lg border border-zinc-950 p-2">
-            </div>
-
-            <button type="submit"
-                class="bg-red-600 text-zinc-100 w-full font-mono font-semibold text-center px-4 py-2 rounded-lg">
-                Enviar
-            </button>
-        </form>
-    </div>
+    <h1>Create a New Film</h1>
+    <form wire:submit.prevent="submit">
+        <div>
+            <label for="title">Title</label>
+            <input type="text" id="title" wire:model="title">
+            @error('title') <span>{{ $message }}</span> @enderror
+        </div>
+        <div>
+            <label for="summary">Summary</label>
+            <textarea id="summary" wire:model="summary"></textarea>
+            @error('summary') <span>{{ $message }}</span> @enderror
+        </div>
+        <div>
+            <label for="cover">Cover</label>
+            <input type="text" id="cover" wire:model="cover">
+            @error('cover') <span>{{ $message }}</span> @enderror
+        </div>
+        <button type="submit">Create</button>
+    </form>
+    @if (session()->has('message'))
+        <div>{{ session('message') }}</div>
+    @endif
 </div>
