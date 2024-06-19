@@ -1,8 +1,3 @@
-
-# Desafio Back-end MakeWeb
-
-Primeiramente, obrigado pelo seu interesse em trabalhar na Agência MakeWeb! Abaixo você encontrará todos as informações necessárias para iniciar o seu teste.
-
 ## Índice
 
 - [O Desafio](#o-desafio)
@@ -57,42 +52,10 @@ O desafio consiste em desenvolver um site de filmes utilizando o framework Larav
 - [Composer](https://getcomposer.org/download/)
 - Acesso à internet.
 
-## Passos
-
-Esse teste tem como objetivo avaliar o seu conhecimento back-end em PHP e Laravel, portanto estamos considerando que você ja possua o conhecimento básico PHP, Laravel e versionamento de código com Git e GitHub.
-
-### 1. Realize o fork do repositório
-
-Primeiramente, faça um fork deste repositório para a sua conta do GitHub. Clique no botão "Fork" no canto superior direito da página.
-
-### 2. Clone o repositório Forkado
-
-Em seguida, clone o repositório forkado para a sua máquina local. No terminal, execute o comando:
-
-```bash
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-```
-
-Certifique-se de substituir seu-usuario pelo seu nome de usuário no GitHub e nome-do-repositorio pelo nome do repositório forkado.
-
-### 3. Instale as dependências Composer
-
-Navegue até o diretório do projeto clonado e instale as dependências necessárias:
-
-```bash
-cd nome-do-repositorio
-composer install
-```
-
-### 4. Configurando .env
-
-Copie o arquivo `.env.example` para `.env` com o comando:
-
-```bash
-cp .env.example .env
-```
 
 ### 5. Configurando o Banco de Dados
+
+### Como banco de dados optei pela opção de PostgreSQL * Checkar .env *
 
 O projeto está configurado para utilizar o SQLite como banco de dados, então vamos ensinar a como configurar o SQLite.
 
@@ -147,39 +110,3 @@ php artisan migrate
 php artisan db:seed
 ```
 
-## O que será avaliado
-
-- Padrões de classe, atributos e métodos
-- Utilização dos recursos disponíveis no Laravel e Livewire
-- Conhecimento da linguagem e do framework
-- Utilização correta de git
-
-## Links úteis
-
-- [PHP](https://www.php.net/)
-- [Composer](https://getcomposer.org/)
-- [Laravel](https://laravel.com/docs/11.x)
-- [Livewire](https://livewire.laravel.com/)
-
-<hr>
-
-### `<?php echo 'Boa Sorte! 😄';`
-
-## Desenvolvedores/Contribuintes
-
-<table>
-    <tbody>
-        <tr>
-            <td align="center" width="14.28%">
-                <a href="https://github.com/vitorbizarra">
-                    <img src="https://avatars.githubusercontent.com/u/79993997?v=4" width="100px;"
-                        alt="Vitor Bizarra" />
-                    <br />
-                    <sub><b>Vitor Bizarra</b></sub>
-                </a>
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-## Copyright ©️ 2024 - Agência MakeWeb
